@@ -1,6 +1,8 @@
 #check what venv is being used.
 import sys
-print(sys.executable)
+#print(sys.executable)
+#print(sys.path)
+import bioinf_packages
 
 """
 Generates fasta files of sequences corresponding to a gene, species, or orientation
@@ -19,8 +21,9 @@ DELETE ALL PRESENT ITEMS IN FASTA DATA
 
 otherwise they will be overwritten with duplicates and clustalOmega will not work!
 """
-from alignment_funcs.read_gbk import read_gbk
-print(read_gbk("OZ208999.1", "C:/Users/ojmin/OneDrive/Documents/UNI/MPhil/Project/aligment/code/fasta_info"))
+from bioinf_packages.alignment_funcs._overlord import overlord_function
+
+print(overlord_function("C:/Users/ojmin/OneDrive/Documents/UNI/MPhil/Project/aligment/raw_fastas", "C:/Users/ojmin/OneDrive/Documents/UNI/MPhil/Project/aligment/code/fasta_info", "C:/Users/ojmin/OneDrive/Documents/UNI/MPhil/Project/newGenBank.csv", "C:/Users/ojmin/OneDrive/Documents/UNI/Python_Packages/tests/bioinf_packages/alignment_funcs/test_glossary.csv"))
 
 #from alignment_funcs.file_maker import file_maker
 
